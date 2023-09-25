@@ -34,15 +34,15 @@ app.get('/movies', (req, res) => {
     res.json(movies)
 })
 
-// app.get('/movies/:id', (req, res) => {
-//     const { id } = req.params
+app.get('/movies/:id', (req, res) => {
+    const { id } = req.params
 
-//     const movie = movies.find(m => m.id === id)
+    const movie = movies.find(m => m.id === id)
 
-//     if (movie) return res.json(movie)
+    if (movie) return res.json(movie)
 
-//     res.status(404).json({ message: 'Movie not found' })
-// })
+    res.status(404).json({ message: 'Movie not found' })
+})
 
 //PROBLEMAS CON POST:
 //A la hora de crear una película a través de una solicitud POST surge un problema en la validación de los datos de entrada del servidor Node.js. Seguramente veas algo como esto:
