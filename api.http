@@ -1,0 +1,33 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### Recuperar pelicula por id
+GET http://localhost:3000/movies/cd03c13c-e377-4028-8455-e04e151001cc
+
+### Crear pelicula
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Tokio Corola",
+    "year": 2024,
+    "director": "Matias Krummel",
+    "duration": 152,
+    "poster": "https://i.pinimg.com/564x/00/4a/36/004a3600a361006a9ffb0405c8b0f8c7.jpg",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "rate": 9
+}
+
+### Actualizar pelicula
+PATCH http://localhost:3000/movies/cd03c13c-e377-4028-8455-e04e151001cc
+Content-Type: application/json
+
+{
+    "year": 2023,
+    "director": "Matias Krummel",
+    "duration": 150
+}
