@@ -4,12 +4,15 @@ GET http://localhost:3000/movies
 ### Recuperar pelicula por id
 GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 
+### Recuperar todas las películas por un género
+GET http://localhost:3000/movies?genre=sci-fi
+
 ### Crear pelicula
 POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-    "title": "Tokio Corola",
+    "title": "Tokio",
     "year": 2024,
     "director": "Matias Krummel",
     "duration": 152,
@@ -22,12 +25,13 @@ Content-Type: application/json
     "rate": 9
 }
 
+### Borrar una pelicula
+DELETE http://localhost:3000/movies/ff74069d-1ad1-4a7b-8078-c237d24b7531
+
 ### Actualizar pelicula
-PATCH http://localhost:3000/movies/cd03c13c-e377-4028-8455-e04e151001cc
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
 Content-Type: application/json
 
 {
-    "year": 2023,
-    "director": "Matias Krummel",
-    "duration": 150
+    "year": 1995
 }
